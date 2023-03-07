@@ -1,4 +1,4 @@
-# 🔥 **Uni-Compact**
+# 🔑 **Uni-Compact** 🔑
 
 <p align="center">
   <a href="">
