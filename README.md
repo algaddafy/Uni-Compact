@@ -99,7 +99,7 @@ The script will customize all the data with yours in all the files.
 
 ### 🌲 **Project tree**
 
-Files that will get removed after the execution of `SETUP_TEMPLATE.sh` are not shown! 🙈
+All about our project featurs! 🙈
 
 ```text
 Login Page
@@ -198,7 +198,7 @@ Badges and texts will be replaced with your project details!
 ## 🕵️ **Pending**
 
 
-## 💉 **Project tests**
+## 💉 **Pending**
 
 ---
 
@@ -207,7 +207,7 @@ Badges and texts will be replaced with your project details!
 
 ---
 
-## 🎉 Was the template helpful? Please help us raise these numbers up
+## 🎉 Was the project helpful? Please help us raise these numbers up
 
 [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-Profile-informational?style=flat&logo=linkedin&logoColor=white&color=0D76A8)](https://www.linkedin.com/in/nirob-hasan/)
 [![Twitter Badge](https://img.shields.io/badge/Twitter-Profile-informational?style=flat&logo=twitter&logoColor=white&color=1CA2F1)](https://twitter.com/NirobHasan_com)
