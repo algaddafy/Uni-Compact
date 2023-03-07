@@ -172,22 +172,14 @@ A couple of screenshots to delight you before you use this project.
 
 ### 🔺 All the issue
 
-<p align="center">
-  <img width="70%" height="70%" src="https://i.imgur.com/SDJixBz.png" alt="All the issue templates.">
-</p>
-
 ### 🔻 An issue opened
-
-<p align="center">
-  <img width="70%" height="70%" src="https://i.imgur.com/r5AiLWu.png" alt="Bug issue template opened.">
-</p>
 
 ### 📘 The README can be downloaded from here.
 
 Badges and texts will be replaced with your project details!
 
 <p align="center">
-  [Download]() to see the whole README raw file.
+  [Download](https://www.facebook.com/justnirob/) to see the whole README raw file.
 </p>
 
 ### 🔖 Pending
