@@ -179,7 +179,7 @@ A couple of screenshots to delight you before you use this project.
 Badges and texts will be replaced with your project details!
 
 <p align="center">
-  [Download](https://www.facebook.com/justnirob/) to see the whole README raw file.
+ Link is pending.
 </p>
 
 ### 🔖 Pending
