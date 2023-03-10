@@ -20,10 +20,17 @@
 
 ## 🤔 **What is this project all about?**
 
-* Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-* Nullam malesuada nibh in nulla luctus, ut finibus ante euismod.
-* Quisque tempor erat sit amet nisi euismod molestie. Vivamus sodales placerat sapien non interdum.
-* Suspendisse euismod tortor a quam fringilla mattis. Cras scelerisque vitae urna non semper.
+* A website designed for an academic institution is complex and works best on a desktop.
+Unless a website is specially designed to be mobile compatible, it is generally inconvenient to
+use websites with complex functionalities that have been scaled down to a small screen device.
+* Uni-compact focuses on serving mobile users by being an all-in-one, convenient and robust app
+that is able to provide all academically relevant information while maintaining its core objective
+of being ‘compact’ and ‘simple’.
+* Uni-Compact is able to cater to entities both internal and external relative to the organization
+and its needs. Providing all the functionalities of a full-fledged desktop website such as checking
+a student’s academic performance, status, events, news, and course materials to authority level
+operations implementing C-R-U-D on the institution's database system while also maintaining
+security and isolation of information in accordance with institution policies on privacy.
 * Make your project easy to maintain with **this project**.
 
 ---
