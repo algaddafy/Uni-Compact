@@ -11,7 +11,6 @@ const Login = () => {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [users, setUsers] = useState('');
 
   const handleLogin = () => {
     console.log(`Email: ${email}, Password: ${password}`, `Users: ${users}`);
