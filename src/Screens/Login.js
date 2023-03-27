@@ -16,9 +16,15 @@ const Login = () => {
   const handleLogin = () => {
     console.log(`Email: ${email}, Password: ${password}`, `Users: ${users}`);
     // Add logic to handle login
-
+    if (email === 'gaddafy@gmail.com' && password === 'gaddafy') {
+      navigation.navigate('Faculty_dashboard', { email, password });
+    } else if (email === 'deori@gmail.com' && password === 'deori') {
+      navigation.navigate('Student_dashboard', { email, password });
+    } else {
+      navigation.navigate('Dashboard', { email: email, password: password, users: users });
+    }
     // Navigate to the Profile screen with the email and password values as params
-    navigation.navigate('Dashboard', { email: email, password: password, users: users });
+    // navigation.navigate('Dashboard', { email: email, password: password, users: users });
   };
 
   return (
