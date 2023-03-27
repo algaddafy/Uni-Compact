@@ -31,7 +31,7 @@ const Student_dashboard = ({ route }) => {
     { id: 1, title: 'Results', text: 'You can check your results here.', icon: 'line-chart' },
     { id: 2, title: 'Advisor Information', text: 'See your Advisor informations.', icon: 'address-card' },
     { id: 3, title: 'Notes', text: 'Download your course notes and course outlines.', icon: 'paperclip' },
-    { id: 4, title: 'CGPA Calculator', text: 'Calculat your CGPA here.', icon: 'calculator' },
+    { id: 4, title: 'CGPA Calculator', text: 'Calculate your CGPA here.', icon: 'calculator' },
   ];
   const { email, password, users } = route.params;
 
