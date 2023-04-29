@@ -11,17 +11,22 @@ const Login = () => {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  // const [users, setUsers] = useState('');
+  const [user, setUser] = useState('');
 
   const handleLogin = () => {
     console.log(`Email: ${email}, Password: ${password}`, `Users: ${users}`);
     // Add logic to handle login
-    if (email === 'gaddafy@gmail.com' && password === 'gaddafy') {
-      navigation.navigate('Faculty_dashboard', { email, password });
-    } else if (email === 'deori@gmail.com' && password === 'deori') {
+    if (user === 'Student') {
       navigation.navigate('Student_dashboard', { email, password });
-    } else {
-      navigation.navigate('Dashboard', { email: email, password: password, users: users });
+    }
+    else if (user === 'Faculty') {
+      navigation.navigate('Faculty_dashboard', { email, password });
+    }
+    else if (user === 'Parent') {
+      navigation.navigate('Parent_dashboard', { email, password });
+    }
+    else if (user === 'Department') {
+      navigation.navigate('Dashboard', { email, password });
     }
     // Navigate to the Profile screen with the email and password values as params
     // navigation.navigate('Dashboard', { email: email, password: password, users: users });
@@ -34,7 +39,7 @@ const Login = () => {
       <SelectDropdown
     data={users}
     onSelect={(selectedItem, index) => {
-        console.log(selectedItem, index)
+      setUser(selectedItem);
     }}
     buttonTextAfterSelection={(selectedItem, index) => {
         // text represented after item is selected
