@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppService } from './app.service';
-import { ProductsModule } from './products/products.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DepartmentsModule } from './department/department.module';
 import { StudentsModule } from './student/student.module';
 import { TeachersModule } from './teacher/teacher.module';
+import { AnnouncementsModule } from './announcement/announcement.module';
+import { ParentsModule } from './parent/parent.module';
 
 
 @Module({
@@ -18,7 +19,7 @@ import { TeachersModule } from './teacher/teacher.module';
     autoLoadEntities: true,
     synchronize: true,
   }),
-  ProductsModule,DepartmentsModule,ProductsModule,StudentsModule,TeachersModule],
+  AnnouncementsModule,DepartmentsModule,ParentsModule,StudentsModule,TeachersModule],
   controllers: [],
   providers: [AppService],
 })
