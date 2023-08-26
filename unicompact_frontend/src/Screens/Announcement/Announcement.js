@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { ScrollView } from 'react-native-gesture-handler';
+
 let data = [];
-let temp = [];
+// let temp = [];
 const Card = ({ title, text, icon, route }) => {
     
-    const { email, password, users} = route.params;
-    const navigation = useNavigation();
+    // const { email, password, users} = route.params;
+    // const navigation = useNavigation();
+const navigation = useNavigation();
+const [announcementList, setAnnouncementList] = useState([]);
+
+useEffect(() => {
+  if (route.params?.newAnnouncement) {
+    const { title, description } = route.params.newAnnouncement;
+    setAnnouncementList([...announcementList, { title, description }]);
+  }
+}, [route.params?.newAnnouncement]);
     const handlePress = () => {
         
     };
@@ -32,16 +42,25 @@ const Card = ({ title, text, icon, route }) => {
 };
 
 const Announcement = ({ route }) => {
-    const { email, password, users, title_announcement, body_announcement } = route.params;
+    const { email, password, users } = route.params;
     const navigation = useNavigation();
     const [logoutVisible, setLogoutVisible] = useState(false);
-    const handleInsert = () => {
-        navigation.navigate("Add_announcement", route.params);
-    }
+    const [announcementList, setAnnouncementList] = useState([]);
+    
+      const handleInsert = () => {
+        navigation.navigate("Add_announcement", { setAnnouncementList, announcementList });
+      };
 
-    if (title_announcement != null) {
-        data.push({ title: title_announcement, text: body_announcement });
-    }
+      useEffect(() => {
+        if (route.params?.newAnnouncement) {
+          const { title, description } = route.params.newAnnouncement;
+          setAnnouncementList([...announcementList, { title, description }]);
+        }
+      }, [route.params?.newAnnouncement]);
+
+    // if (title_announcement != null) {
+    //     data.push({ title: title_announcement, text: body_announcement });
+    // }
     
     return (
         <View style={styles.container}>
@@ -63,9 +82,15 @@ const Announcement = ({ route }) => {
             <Text style={styles.info}>{`Email: ${email}`}</Text>
 
             <ScrollView >
-                {data.map(({ title, text, icon }) => (
-                    <Card title={title} text={text} icon={icon} route = {route} />
-                ))}
+            {announcementList.map(({ title, description, icon }, index) => (
+                <Card
+                key={index}
+                title={title}
+                text={description}
+                icon={icon}
+                route={route}
+                />
+            ))}
             </ScrollView>
             <View style={styles.buttonsContainer}>
                 <Button title="Add Announcement" onPress={handleInsert} />
