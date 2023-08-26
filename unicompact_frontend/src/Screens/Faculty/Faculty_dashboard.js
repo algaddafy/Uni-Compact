@@ -13,6 +13,8 @@ const Card = ({ title, text, icon }) => {
       navigation.navigate('Add_student', { title, text, icon });
     }else if (title === 'My Profile') {
       navigation.navigate('My_profile', { title, text, icon });
+    }else if (title === 'Announcement') {
+      navigation.navigate('Announcement', { title, text, icon });
     } else {
       // Handle other cards here
     }

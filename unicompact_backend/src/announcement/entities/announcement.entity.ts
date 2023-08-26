@@ -9,14 +9,5 @@ export class Announcement {
     title: string;
 
     @Column()
-    category: string;
-
-    @Column()
-    subcategory: string;
-
-    @Column()
     description: string;
-
-    @Column()
-    status : string;
 }

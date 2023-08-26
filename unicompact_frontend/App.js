@@ -18,7 +18,7 @@ import Advisor from "./src/Screens/Advisor/Advisor";
 import Announcement from "./src/Screens/Announcement/Announcement";
 import Add_announcement from "./src/Screens/Announcement/Add_announcement";
 import Edit_announcement from "./src/Screens/Announcement/Edit_announcement";
-import List_student from "./src/Screens/Student/List_student";
+// import List_student from "./src/Screens/Student/List_student";
 const stack = createStackNavigator();
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
         <stack.Screen name="Announcement" component={Announcement} />
         <stack.Screen name="Add_announcement" component={Add_announcement} />
         <stack.Screen name="Edit_announcement" component={Edit_announcement} />
-        <stack.Screen name="List_student" component={List_student} />
+        {/* <stack.Screen name="List_student" component={List_student} /> */}
       </stack.Navigator>
     </NavigationContainer>
   );

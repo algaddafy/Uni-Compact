@@ -3,15 +3,26 @@ import { View, Text, StyleSheet, TouchableOpacity, TextInput, Button } from 'rea
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { ScrollView } from 'react-native-gesture-handler';
+import { createAnnouncement } from "../../Services/userService"
 let data = [];
 
 const Add_announcement = ({ route }) => {
   const navigation = useNavigation();
   const { email, password, users } = route.params;
   const [title_announcement, setTitle] = useState('');
-  const [body_announcement, setBody] = useState('');
-  const handleInsert = () => {
-    navigation.navigate("Announcement", {email, password, users, title_announcement, body_announcement});
+  const [description_announcement, setBody] = useState('');
+  // const handleInsert = () => {
+  //   navigation.navigate("Announcement", {title_announcement, description_announcement});
+  // }
+
+  const handleInsert = async () => {
+    try {
+      const newAnnouncement = { title: title_announcement, description: description_announcement }; // create an object with the new announcement data
+      const response = await createAnnouncement(newAnnouncement); // send the new announcement data to the server using the createAnnouncement function
+      navigation.navigate("Announcement", { newAnnouncement }); // navigate to the Announcement screen with the new announcement data
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <View style={styles.container}>
@@ -22,15 +33,13 @@ const Add_announcement = ({ route }) => {
           placeholderTextColor="#aaaaaa"
           onChangeText={(text) => setTitle(text)}
           value={title_announcement}
-          multiline
         />
         <TextInput
           style={styles.inputbody}
           placeholder="Description"
           placeholderTextColor="#aaaaaa"
           onChangeText={(text) => setBody(text)}
-          value={body_announcement}
-          multiline
+          value={description_announcement}
         />
       </ScrollView>
       <View style={styles.buttonsContainer}>
